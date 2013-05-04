@@ -28,7 +28,7 @@ Dancer.prototype.step = function(timeBetweenSteps){
     // wrapping context in closure because setTimeout calls callbacks in the global context
     var context = this;
     var callback = function(){
-      context.step.call(context,timeBetweenSteps);
+      context.step(timeBetweenSteps);
     };
     setTimeout(callback, timeBetweenSteps);
 };

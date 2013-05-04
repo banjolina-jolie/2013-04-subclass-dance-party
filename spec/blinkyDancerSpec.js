@@ -27,13 +27,13 @@ describe("blinkyDancer", function() {
       // specifically, the spied-upon step function will not be called the first time around
       jasmine.Clock.tick(timeBetweenSteps);
 
-      expect(blinkyDancer.step.callCount).toBe(0);
-
-      jasmine.Clock.tick(timeBetweenSteps);
       expect(blinkyDancer.step.callCount).toBe(1);
 
       jasmine.Clock.tick(timeBetweenSteps);
       expect(blinkyDancer.step.callCount).toBe(2);
+
+      jasmine.Clock.tick(timeBetweenSteps);
+      expect(blinkyDancer.step.callCount).toBe(3);
     });
 
   });

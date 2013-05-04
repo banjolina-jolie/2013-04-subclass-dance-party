@@ -3,7 +3,6 @@ var BlinkyDancer = function(top, left, timeBetweenSteps){
   // so we must keep a copy of the old version of this function
   //equivalent to Dancer.prototype.constructor
   Dancer.apply(this, arguments);
-  debugger;
 };
 
 BlinkyDancer.prototype = Object.create(Dancer.prototype);
