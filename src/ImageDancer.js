@@ -4,6 +4,8 @@ var ImageDancer = function() {
   this.$node.removeClass('dancer');
   this.$node.addClass('imageDancer');
 
+  $('audio')[0].play();
+
 };
 
 ImageDancer.prototype = Object.create(Dancer.prototype);
@@ -16,7 +18,7 @@ ImageDancer.prototype.step = function () {
     step: function(now,fx) {
       $(this).css('transform', 'rotate('+now+'deg)');
       },
-    duration:1000}
+    duration:this.timeBetweenSteps-50}
   );
   this.$node.css('rotationProp', '0');
 

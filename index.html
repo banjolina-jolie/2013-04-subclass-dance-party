@@ -18,7 +18,9 @@
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="JigglyDancer">add a jiggly dancer</a>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="ExplodeDancer">add an explode dancer</a>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="ImageDancer">add an image dancer</a>
+      <a href="#" id="danceShowdownButton" data-dancer-maker-function-name="ImageDancer">dance showdown</a>
     </div>
+    <audio src="http://www.kessels.com/catsounds/cat5.wav"></audio>
 
     <script>
       $(document).ready(function(){
@@ -48,9 +50,15 @@
             $("body").width() * Math.random(),
             Math.random() * 1000
           );
-
+          window.dancers.push(dancer);
           $('body').append(dancer.$node);
         });
+        $('#danceShowdownButton').click(function(event) {
+          for (var i = window.dancers.length - 1; i >= 0; i--) {
+            window.dancers[i].lineUp();
+          };
+        });
+
       });
     </script>
 

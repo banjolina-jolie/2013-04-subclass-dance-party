@@ -8,10 +8,11 @@ JigglyDancer.prototype.constructor = JigglyDancer;
 JigglyDancer.prototype.step = function() {
   Dancer.prototype.step.apply(this,arguments);
 
+  var duration = this.timeBetweenSteps/2.0;
   this.$node.animate({
     'margin-left':'10px'},
-    100, 'linear');
+    duration, 'linear');
   this.$node.animate({
     'margin-left':'0px'},
-    100, 'linear');
+    duration, 'linear');
 };

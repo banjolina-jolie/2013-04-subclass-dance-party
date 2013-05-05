@@ -4,6 +4,8 @@ var Dancer = function(top, left, timeBetweenSteps){
   // use jQuery to create an HTML <span> tag
   this.$node = $('<span class="dancer"></span>');
 
+  this.timeBetweenSteps = timeBetweenSteps;
+
   this.step(timeBetweenSteps);
 
   // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
@@ -31,4 +33,16 @@ Dancer.prototype.step = function(timeBetweenSteps){
       context.step(timeBetweenSteps);
     };
     setTimeout(callback, timeBetweenSteps);
+};
+
+Dancer.prototype.lineUp = function() {
+
+  this.$node.animate({
+    left: '',
+    right:'10px'
+  }, 1000);
+
+  // this.$node.css({
+  //   right:'10px'
+  // });
 };

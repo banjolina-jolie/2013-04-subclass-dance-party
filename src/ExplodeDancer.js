@@ -8,18 +8,17 @@ ExplodeDancer.prototype.constructor = ExplodeDancer;
 ExplodeDancer.prototype.step = function () {
   Dancer.prototype.step.apply(this, arguments);
 
-  // current
-  //jQuery:
+  var duration = this.timeBetweenSteps/4.0;
   this.$node.animate({
     'height':'10px'},
-    500, 'swing');
+    duration, 'swing');
   this.$node.animate({
     'width':'10px'},
-    500, 'swing');
+    duration, 'swing');
     this.$node.animate({
     'height':'0px'},
-    500, 'swing');
+    duration, 'swing');
   this.$node.animate({
     'width':'0px'},
-    500, 'swing');
+    duration, 'swing');
 };
