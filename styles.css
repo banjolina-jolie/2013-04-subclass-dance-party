@@ -2,14 +2,22 @@ body, html{
   height:100%;
 }
 body{
-  margin: 0px;
-  background-color:#444;
-  font-size: 18px;
+  /*background-*/
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+  background:#222 url(img/disco_ball.png) no-repeat;
+  font-size: 16px;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
+  text-decoration: none;
 }
-.title, .addDancerButton{
+
+a:hover {
+  text-decoration: underline;
+}
+
+.title, .topbar a {
   padding:5px 12px;
   float:right;
 }
@@ -34,5 +42,5 @@ body, a:link, a:visited, a:active{
   position: absolute;
   background-size: 100%;
   border-radius: 100%;
-  background-image: url(src/cat.jpeg);
+  background-image: url(img/cat.jpeg);
 }

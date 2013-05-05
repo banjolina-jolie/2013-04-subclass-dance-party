@@ -22,3 +22,11 @@ ExplodeDancer.prototype.step = function () {
     'width':'0px'},
     duration, 'swing');
 };
+
+ExplodeDancer.prototype.lineUp = function() {
+  Dancer.prototype.lineUp.call(this);
+  this.step = function() {
+    this.step();
+    
+  }
+};

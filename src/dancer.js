@@ -40,8 +40,4 @@ Dancer.prototype.lineUp = function() {
   this.$node.animate({
     left: '1%'
   }, 1000);
-
-  // this.$node.css({
-  //   right:'10px'
-  // });
 };
