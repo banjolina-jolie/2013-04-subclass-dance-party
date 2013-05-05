@@ -4,8 +4,9 @@ var ImageDancer = function() {
   this.$node.removeClass('dancer');
   this.$node.addClass('imageDancer');
 
-  $('audio')[0].play();
-
+  if($('audio').length) {
+    $('audio')[0].play();
+  }
 };
 
 ImageDancer.prototype = Object.create(Dancer.prototype);

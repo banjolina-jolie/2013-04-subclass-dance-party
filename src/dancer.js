@@ -38,8 +38,8 @@ Dancer.prototype.step = function(timeBetweenSteps){
 Dancer.prototype.lineUp = function() {
 
   this.$node.animate({
-    left: '',
-    right:'10px'
+    left: '1%'
+    // right:''
   }, 1000);
 
   // this.$node.css({
